@@ -1,0 +1,19 @@
+ul {
+    li a {
+        color: white
+    }
+    li {
+        margin-left: 10px;
+    }
+    
+    li.nav-item.active {
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    li.nav-item:hover {
+        border-radius: 4px;
+        background-color: white;
+    }
+} 
+

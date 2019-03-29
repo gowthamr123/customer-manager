@@ -1,0 +1,31 @@
+.card-container {
+    width:85%;
+}
+
+.card {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+
+    .image {
+        width: 40%;
+    }
+
+    img {
+        width:50%;
+    }
+
+    .address {
+        margin-top: -5px;
+    }
+
+}

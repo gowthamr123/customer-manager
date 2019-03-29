@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row card-container">
+    <div class="col-md-3 col-sm-6" *ngFor="let customer of customers | paginate: { itemsPerPage: 8, currentPage: p }">
+      <div class="card">
+        <div class="card-header">
+            <p style="float:left"> {{customer.firstName}} {{customer.lastName}} </p>
+            <p style="float:right"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </p>
+        </div>
+        <div class="card-body">
+            <div class="image" *ngIf="customer.gender == 'male'; else femaleImg">
+              <img src="/assets/images/male.png">
+            </div>
+            <ng-template #femaleImg>
+              <div class="image">
+                <img src="/assets/images/female.png">
+              </div>
+            </ng-template>
+          
+          <div class="address">
+            <p>
+            {{customer.city}}, <br/> {{customer.state.name}} <br/> <a href="#"> View Orders </a>
+            </p>
+          </div>
+          <!-- <h5 class="card-title">{{customer.city}}</h5>
+          <p class="card-text">{{customer.firstName}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:20px">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

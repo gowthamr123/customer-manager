@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12" style="margin:10px">
+       <h4> <i class='fa fa-user' style='font-size:36px'></i> Customers </h4>
+    </div>
+  </div>
+  <div class="row navbar">
+    <div class="col-md-10 col-sm-12 pull-left">
+      <ul class="view_navigation">
+          <li> 
+            <a (click)="changeDisplayMode('cardView')" [class.active]="displayMode === 'cardView'"> <i class="fa fa-th-large"></i> Card View </a>
+          </li>
+          <li> 
+            <a (click)="changeDisplayMode('listView')" [class.active]="displayMode === 'listView'"> <i class="fa fa-list"></i> List View </a>
+          </li>
+          <li> 
+            <a (click)="changeDisplayMode('mapView')" [class.active]="displayMode === 'mapView'"> <i class="fa fa-map-marker"></i> Map View </a>
+          </li>
+          <li>
+            <a routerLink="#"> <i class="fa fa-plus"></i> New Customer </a>
+          </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-sm-12">
+      Filter : <input type="text">
+      
+    </div>
+  </div>
+
+  
+  <app-customer-card [customers]="customerData" [hidden]="displayMode != 'cardView'">  </app-customer-card>
+
+  <!-- <app-pagination (goPage)="goToPage($event)"
+  (goNext)="onNext()"
+  (goPrev)="onPrev()"
+  [pagesToShow]="3"
+  [page]="page"
+  [perPage]="limit"
+  [count]="total"></app-pagination> -->
+
+  <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+    
+  
+</div>

@@ -1,0 +1,29 @@
+ul.view_navigation {
+    li {
+        display: inline;
+        
+    }
+
+    li a {
+        text-decoration: none;
+        color: grey;
+        cursor: pointer;
+    }
+
+    li a:hover, li a.active {
+        color: #000000;
+        font-weight: bold;
+    }
+    
+    li:not(:first-child) {
+        margin-left: 30px;
+    }
+}
+
+.navbar, .customerlist {
+    margin-top: 0.3rem;
+}
+
+.pull-left {
+    margin-left: -30px;
+}
